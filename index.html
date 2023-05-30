@@ -1,67 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Robo Will</title>
 </head>
 <body>
-        <header>
-            <nav>
-                <ul class="links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
+        <header class="container">
+            <nav class="nav">
+                <section class="logo">
+                    <img src="./images/logo.svg" alt="Logo Robo Ubiq" />
+                    <p class="logo-name">Ubiq</p>
+                </section>
+                <section class="nav-links">
+                    <ul class="links">
+                        <li><a class="link atention-color" href="index.html">Inicio</a></li>
+                        <li><a class="link" href="sobre.html">Sobre</a></li>
+                        <li><a class="link" href="funcionalidades.html">Funcionalidades</a></li>
+                        <li><a class="link" href="valores.html">Valores</a></li>
+                    </ul>
+                    <button class="signup">Criar conta</button>
+                </section>
             </nav>
         </header>
-        <section>
-            <article>
-                <img>
-            </article>
-            <article>
-                <h1>Sobre nós</h1>
-            </article>
-        </section>
-        <section>
-            <img/>
-        </section>
-        <section>
-            <article>
-                <h1>Funcionalidades</h1>
-                <p>aljfkldçhflçksdh</p>
-                <section>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                </section>
-            </article>
-        </section>
-        <section>
-            <article>
-                <img>
-            </article>
-            <article>
-                <h1>Sobre nós</h1>
-            </article>
-        </section>
-        <footer>
-            <section>
+        <main class="container main">
+            <section class="container-section">
+                <article class="content-main">
+                    <h1 class="tour">Faça um tour pelo o nosso <span class="atention-color">Bot</span> de proteção</h1>
+                    <p class="legend">Nos somos altamente focados em proteção para comunidade no Discord.</p>
+                    <section class="flex">
+                        <button class="button-start">Começar ></button>
+                        <button class="button-more">Saiba mais</button>
+                    </section>
+                </article>
+                <article class="hero">
+                    <img src="./images/robots-doing-data-research.svg" alt="Robos fazendo planejamento">
+                </article>
+            </section>
+            <section class="clients">
+                <img src="./images/Clients.svg" alt="Nosso clientes: Slack, Woocommerce, Amazon e Microsoft"/>
+            </section>
+            <section  class="container-section gap about-us">
                 <article>
-                    <img />
+                    <img src="./images/robot-cleaning-mirror.svg" alt="Robo fazendo limpeza em um vidro" />
                 </article>
                 <article>
-                    <img />
+                    <h1 class="title">Sobre nós</h1>
+                    <p class="legend-section">Nos temos o  compromisso de proteger crianças e comunidades de exposição a ponografia. Nos protegemos comunidades  desde 2018. </p>
+                    <section class="grid-3">
+                        <article class="us-1">
+                            <p class="us-title">Funções</p>
+                            <h3 class="us-value">30+</h3>
+                        </article>
+                        <article class="us-2">
+                            <p class="us-title">Clientes</p>
+                            <h3 class="us-value">950</h3>
+                        </article>
+                        <article class="us-3">
+                            <p class="us-title">Bloqueados</p>
+                            <h3 class="us-value">30M+</h3>
+                        </article>
+                    </section>
+                </article>
+            </section>
+            <section class="features">
+                <article>
+                    <section class="center">
+                        <h1 class="title">Funcionalidades</h1>
+                        <p class="features-legend">Pensando em nosso cliente e em como podemos tornar as comunidades mais seguras, democatrica e  livre de pornografia. Essas foram as funcionalidades que criamos</p>
+                    </section>
+                    <section class="grid-3">
+                        <article>
+                            <span>
+                                <img src="./images/icons/link 1.svg" alt="Robo" />
+                            </span>
+                            <h3>Inteligencia Artificial</h3>
+                            <p>Utilizamos inteligencia artifical para identificar conteudo adulto.</p>
+                            <a href="#">Saiba mais</a>
+                        </article>
+                        <article>
+                            <span>
+                                <img src="./images/icons/star.svg" alt="Robo" />
+                            </span>
+                            <h3>Disponibilidade 24H </h3>
+                            <p>Nosso bot Ubiq funciona 24 horas, 7 dias por semana  para deixar você sempre seguro</p>
+                            <a href="#">Saiba mais</a>
+                        </article>
+                        <article>
+                            <span>
+                                <img src="./images/icons/plus-circle.svg" alt="Robo" />
+                            </span>
+                            <h3>Remoção</h3>
+                            <p>Remove automaticamente qualquer um que infrija as regras da comunidade</p>
+                            <a href="#">Saiba mais</a>
+                        </article>
+                    </section>
+                </article>
+            </section>
+            <section class="container-section gap values">
+                <article>
+                    <img src="./images/robots-doing-business-discussion.svg" alt="Robos armados preparados para eliminar ameaças">
+                </article>
+                <article>
+                    <h1 class="title">Nossos Valores</h1>
+                    <p class="legend-section">
+                        Nos acreditamos em uma  web segura, onde comunidades possam interagir sem risco de exposição  a conteudo adulto, livre de trools  e que as pessoas possam se comunicar 
+                    </p>
+                    <button class="values-button">
+                        Saiba mais
+                    </button>
+                </article>
+            </section>
+        </main>
+        <footer class="footer">
+            <section class="footer-content">
+                <article class="footer-logo">
+                    <img src="./images/logo-small.svg" />
+                    <p class="footer-logo-name">Ubiq</p>
+                </article>
+                <article class="medias">
+                    <img src="./images/medias.svg" />
                 </article>
                 <nav>
                     <ul class="links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="contato.html">Contato</a></li>
+                        <li><a class="link-footer" href="index.html">Home</a></li>
+                        <li><a class="link-footer" href="sobre.html">Sobre nós</a></li>
+                        <li><a class="link-footer" href="funcionalidades.html">Funcionalidades</a></li>
+                        <li><a class="link-footer" href="valores.html">Valores</a></li>
                     </ul>
                 </nav>
             </section>
@@ -73,13 +142,233 @@
     body {
         margin: 0;
         padding: 0;
-        font-family: sans-serif;
-        font-family: 'Inter', sans-serif;
+        font-family: 'Manrope', sans-serif;
+        background-color: #FAFAFA;
+    }
+    a {
+        text-decoration: none;
+    }
+    h1 {
+        margin: 0;
+    }
+    .container {
+        width: 1180px;
+        margin: 0 auto;
+    }
+    .flex {
+        display: flex;
+    }
+    .grid-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+    .logo-name {
+        font-size: 30px;
+        color: #2B2B2B;
+        margin-left: 8px;
+        font-weight: 700;
+        line-height: 41px;
+    }
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .signup {
+        margin-left: 115px;
+        background: #0057FF;
+        border-radius: 8px;
+        padding: 17px 28px;
+        border: none;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 700;
     }
     .links {
         margin: 0;
+        display: flex;
+        text-decoration: none;
+        list-style: none;
     }
-    .background{
-        background-color: #13004e;
+    .link {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 18px;
+        color: #2B2B2B;
+        margin-left: 48px;
+    }
+    .main {
+        margin-top: 128px;
+    }
+    .container-section {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+    }
+    .gap {
+        gap: 82px;
+    }
+    .hero {
+        justify-self: end;
+    }
+    .atention-color {
+        color: #0057FF;
+    }
+    .tour {
+        font-size: 56px;
+        font-weight: 800;
+        color: #2B2B2B;
+        margin: 0;
+    }
+    .title {
+        font-size: 52px;
+        font-weight: 800;
+        color: #2B2B2B;
+        line-height: 130%;
+    }
+    .legend {
+        margin: 36px 0 74px 0;
+        color: #5B5B5B;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 180%;
+    }
+    .button-start {
+        background: #0057FF;
+        border-radius: 10px;
+        padding: 21px 53px;
+        border: none;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .button-more {
+        background: none;
+        border-radius: 10px;
+        padding: 21px 53px;
+        border: 1px solid #0057FF;
+        color: #2B2B2B;
+        font-size: 16px;
+        font-weight: 700;
+        margin-left: 32px;
+    }
+    .clients {
+        margin: 145px auto;
+        display: flex;
+        justify-content: center;
+    }
+    .legend-section {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 36px;
+        color: #5B5B5B;
+    }
+    .us-2 {
+        position: relative;
+    }
+    .us-2:after {
+        content: '';
+        width: 0;
+        height: 70%;
+        position: absolute;
+        border: 2px solid #0057FF;
+        top: 11%;
+        left: -70px;
+    }
+    .us-2:before {
+        content: '';
+        width: 0;
+        height: 70%;
+        position: absolute;
+        border: 2px solid #0057FF;
+        top: 11%;
+        left: 170px;
+    }
+    .us-3 {
+        margin-left: 71px;
+    }
+    .us-title {
+        color: #5B5B5B;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+    }
+    .us-value {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 55px;
+        color: #0057FF;
+    }
+    .center {
+        text-align: center;
+    }
+    .footer {
+        background-color: #2B2B2B;
+        width: 100%;
+        padding-bottom: 40px;
+
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .footer-logo-name {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 41px;
+        color: #FFF;
+        margin-left: 8px;
+    }
+    .medias {
+        margin: 40px 0;
+    }
+    .link-footer {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        margin-right: 40px;
+        color: #FFFFFF;
+    }
+    .about-us {
+        margin-bottom: 152px;
+    }
+    .features {
+        margin-bottom: 166px;
+    }
+    .features-legend {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 180%;
+        text-align: center;
+        color: #5B5B5B;
+
+    }
+    .values {
+        margin-bottom: 207px;
+    }
+    .values-button {
+        background: #0057FF;
+        border-radius: 8px;
+        padding: 15px 35px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        color: #FFFFFF;
+        border: none;
     }
 </style>
