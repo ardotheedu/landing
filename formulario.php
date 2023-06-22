@@ -13,9 +13,6 @@
     <label for="nome">Nome:</label>
     <input type="text" id="nome" name="nome" placeholder="Nome" required><br><br>
 
-    <label for="sobrenome">Sobrenome:</label>
-    <input type="text" id="nome" name="sobrenome" placeholder="Sobrenome" required><br><br>
-
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" placeholder="Email" required><br><br>
 

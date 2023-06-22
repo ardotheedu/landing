@@ -1,3 +1,6 @@
+<?php
+  include("verificarlogin.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,7 +12,8 @@
 </head>
 <body>
   <a href="home.php">Voltar</a>
-  <form action="#" method="POST">
+  <h1>Acesse a sua conta</h1>
+  <form action="" method="POST">
 
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" placeholder="Email" required><br><br>

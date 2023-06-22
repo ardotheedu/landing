@@ -9,12 +9,6 @@ if (isset($_POST['nome'])) {
     $nome = '';
 }
 
-if (isset($_POST['sobrenome'])) {
-    $sobrenome = $_POST['sobrenome'];
-} else {
-    $sobrenome = '';
-}
-
 if (isset($_POST['email'])) {
     $email = $_POST['email'];
 } else {
@@ -27,7 +21,7 @@ if (isset($_POST['senha'])) {
     $senha = '';
 }
 
-$sql = "INSERT INTO cadastroubiq(nome, sobrenome, email, senha) VALUES ('$nome', '$sobrenome', '$email', '$senha')";
+$sql = "INSERT INTO cadastroubiq(nome, email, senha) VALUES ('$nome', '$email', '$senha')";
 
 if (mysqli_query($conexao, $sql)) {
     echo "<p>Usuário cadastrado<p>";
