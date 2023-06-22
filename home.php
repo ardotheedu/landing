@@ -1,3 +1,7 @@
+<?php include("top.php"); ?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,4 +16,9 @@
         <a href="formulario.php">Cadastre-se</a>
     </div>
 </body>
+
 </html>
+
+
+
+<?php include("bottom.php"); ?>
