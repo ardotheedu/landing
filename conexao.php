@@ -9,6 +9,6 @@
         die("Houve um erro na conexão: ".mysqli_connect_error());
         
     }else{
-        echo "Conexão feita com sucesso";
+        //echo "Conexão feita com sucesso";
     }
 ?>
