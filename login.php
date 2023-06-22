@@ -9,7 +9,7 @@
 </head>
 <body>
   <a href="home.php">Voltar</a>
-  <form action="cadastro.php" method="POST">
+  <form action="#" method="POST">
 
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" placeholder="Email" required><br><br>
