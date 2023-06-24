@@ -24,6 +24,7 @@ h1 {
 .grid-4{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
 }
 .nav {
     display: flex;
@@ -135,6 +136,24 @@ h1 {
     line-height: 36px;
     color: #5B5B5B;
     display: inline-block;
+}
+.feature {
+    border-radius: 12px;
+    background: #FFF;
+    padding: 44px 40px;
+}
+.bg {
+    padding: 17px;
+    border-radius: 8px;
+}
+.ban {
+    background-color: #DBF9ED;
+}
+.on {
+    background-color: #FFE1E9;
+}
+.ai {
+    background-color: #FFEDE6;
 }
 .us-2 {
     position: relative;

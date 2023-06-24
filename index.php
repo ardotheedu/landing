@@ -48,28 +48,28 @@ include("top.php");
                         <p class="features-legend">Pensando em nosso cliente e em como podemos tornar as comunidades mais seguras, democátricas e livres de pornografia. Essas foram as funcionalidades que criamos:</p>
                     </section>
                     <section class="grid-4">
-                        <article>
+                        <article class="feature">
                             <span>
-                                <img src="./images/icons/link 1.svg" alt="Robo" />
+                                <img class="ai bg" src="./images/icons/link 1.svg" alt="Robo" />
                             </span>
                             <h3>Inteligência Artificial</h3>
                             <p>Utilizamos inteligência artifical para identificar conteúdo adulto.</p>
                             <a href="#">Saiba mais</a>
                         </article>
-                        <article>
+                        <article class="feature">
                             <span>
-                                <img src="./images/icons/star.svg" alt="Robo" />
+                                <img class="on bg" src="./images/icons/star.svg" alt="Robo" />
                             </span>
-                            <h3>Inteligência Artificial</h3>
-                            <p>Utilizamos inteligência artifical para identificar conteúdo adulto.</p>
+                            <h3>Disponibilidade 24H</h3>
+                            <p>Nosso bot Ubiq funciona 24 horas, 7 dias por semana  para deixar você sempre seguro</p>
                             <a href="#">Saiba mais</a>
                         </article>
-                        <article>
+                        <article class="feature">
                             <span>
-                                <img src="./images/icons/plus-circle.svg" alt="Robo" />
+                                <img  class="ban bg" src="./images/icons/plus-circle.svg" alt="Robo" />
                             </span>
-                            <h3>Inteligência Artificial</h3>
-                            <p>Utilizamos inteligência artifical para identificar conteúdo adulto.</p>
+                            <h3>Ban automatico</h3>
+                            <p>Remove automaticamente qualquer um que infrija as regras da comunidade</p>
                             <a href="#">Saiba mais</a>
                         </article>
                     </section>
