@@ -24,7 +24,7 @@
                         <li><a class="link" href="funcionalidades.php">Funcionalidades</a></li>
                         <li><a class="link" href="valores.php">Valores</a></li>
                     </ul>
-                    <a class="signup" href="home.php" target="_blank">Iniciar</a>
+                    <a class="signup" href="login.php" target="_blank">Iniciar</a>
                 </section>
             </nav>
         </header>
