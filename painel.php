@@ -11,10 +11,15 @@
     <title>Painel do usuario</title>
 </head>
 <body>
-    Bem vindo ao Painel, <?php echo $_SESSION['nome']; ?>
+    <p>Bem vindo ao painel do usuario.</p>
+    <br><br>
 
-    <p>
-        <a href="logout.php">Sair</a>
-    </p>
+    <h1>PAINEL</h1>
+    <br>
+    <p>Imagem do usuario ficaria aqui</p>
+    <p>Opção de alterar a imagem de perfil do usuario (função anexar)</p>
+    <p>Nome: <?php echo $_SESSION['nome']; ?></p>
+    <br>
+    <p><a href="logout.php">Encerrar a sessão</a></p>
 </body>
 </html>
