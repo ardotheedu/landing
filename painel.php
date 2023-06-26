@@ -17,8 +17,8 @@
     <h1>PAINEL</h1>
     <br>
     <p>Imagem do usuario ficaria aqui</p>
-    <p>Opção de alterar a imagem de perfil do usuario (função anexar)</p>
     <p>Nome: <?php echo $_SESSION['nome']; ?></p>
+    <input class="submit" type="submit" name="alterar" value="Alterar informações do usuário">
     <br>
     <p><a href="logout.php">Encerrar a sessão</a></p>
 </body>
