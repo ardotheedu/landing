@@ -1,8 +1,6 @@
 <?php
 include("conexao.php");
 
-//isset significa = estar definido
-
 if (isset($_POST['nome'])) {
     $nome = $_POST['nome'];
 } else {
@@ -17,11 +15,13 @@ if (isset($_POST['email'])) {
 
 if (isset($_POST['senha'])) {
     $senha = $_POST['senha'];
+    $senhaCriptografada = md5($senha); // Criptografa a senha usando MD5
 } else {
     $senha = '';
+    $senhaCriptografada = '';
 }
 
-$sql = "INSERT INTO cadastroubiq(nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+$sql = "INSERT INTO cadastroubiq(nome, email, senha) VALUES ('$nome', '$email', '$senhaCriptografada')";
 
 if (mysqli_query($conexao, $sql)) {
     echo "<p>Usuário cadastrado<p>";

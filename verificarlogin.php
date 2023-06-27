@@ -9,9 +9,10 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     } else {
         $email = mysqli_real_escape_string($conexao, $_POST['email']);
         $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
+        $senhaCriptografada = md5($senha); // Aplica o MD5 à senha fornecida
 
-        $sql_code = "SELECT * FROM cadastroubiq WHERE email = '$email' AND senha = '$senha'";
-        $sql_query = mysqli_query($conexao, $sql_code) or die("Falha na execução do código SQL ".mysqli_error($conexao));
+        $sql_code = "SELECT * FROM cadastroubiq WHERE email = '$email' AND senha = '$senhaCriptografada'";
+        $sql_query = mysqli_query($conexao, $sql_code) or die("Falha na execução do código SQL " . mysqli_error($conexao));
 
         $quantidade = mysqli_num_rows($sql_query);
 
