@@ -50,7 +50,7 @@ if (isset($_FILES["upload"])) {
         <input type="submit" name="submit" value="Upload File">
     </form>
     <p>Nome: <?php echo $_SESSION['nome']; ?></p>
-    <input class="submit" type="submit" name="alterar" value="Alterar informações do usuário">
+    <a href="alterarinformacoes.php">Alterar informações do usuário</a>
     <br>
     <p><a href="logout.php">Encerrar a sessão</a></p>
 </body>
