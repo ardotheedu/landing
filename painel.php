@@ -1,10 +1,9 @@
 <?php
 include("protect.php");
 
-// (A) SAVE IMAGE INTO DATABASE
 if (isset($_FILES["upload"])) {
     require "2-lib-store.php";
-    $result = $_STORE->save(); // Save the uploaded image to the database
+    $result = $_STORE->save();
     if ($result === true) {
         $_SESSION["profilePicPath"] = $_FILES["upload"]["name"];
     }
