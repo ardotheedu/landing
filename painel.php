@@ -1,12 +1,15 @@
 <?php
-   include("protect.php");
-   
-   if (isset($_SESSION["profilePicPath"])) {
-       $profilePicPath = $_SESSION["profilePicPath"];
-   } else {
-       // Set a default profile picture path if no picture has been uploaded yet
-       $profilePicPath = "profile_pics/default.png";
-   }
+include("protect.php");
+
+// (A) SAVE IMAGE INTO DATABASE
+if (isset($_FILES["upload"])) {
+    require "2-lib-store.php";
+    $result = $_STORE->save(); // Save the uploaded image to the database
+    if ($result === true) {
+        $_SESSION["profilePicPath"] = $_FILES["upload"]["name"];
+    }
+    echo "<div class='note'>" . ($result ? "OK" : $_STORE->error) . "</div>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -15,21 +18,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel do usuario</title>
+    <title>Painel do usuário</title>
 </head>
 <body>
-    <p>Bem vindo ao painel do usuario.</p>
+    <p>Bem-vindo ao painel do usuário.</p>
     <br><br>
 
     <h1>PAINEL</h1>
-    <img src="<?php echo $profilePicPath; ?>" alt="Profile Picture">
     <br>
-    <form action="upload.php" method="POST" enctype="multipart/form-data">
-        <label for="profilePic">Profile Picture:</label>
-        <input type="file" name="profilePic" id="profilePic">
-        <input type="submit" value="Upload">
+    <p>Imagem do usuário:</p>
+    <?php
+    include("conexao.php");
+    if (isset($_SESSION["profilePicPath"])) {
+        $name = $_SESSION["profilePicPath"];
+        $sql = "SELECT `file_mime`, `file_data` FROM `storage` WHERE `file_name`=('$name')";
+        $stmt = mysqli_query($conexao, $sql);
+        $file = $stmt->fetch_row();
+
+        if ($file) {
+            echo '<img src="data:image/jpeg;base64,'.base64_encode($file[1]) .'" />';
+            
+        } else {
+            $error = "$name not found";
+        }
+    
+    }
+    ?>
+    <br><br>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="upload" required>
+        <input type="submit" name="submit" value="Upload File">
     </form>
-    <p>Imagem do usuario ficaria aqui</p>
     <p>Nome: <?php echo $_SESSION['nome']; ?></p>
     <input class="submit" type="submit" name="alterar" value="Alterar informações do usuário">
     <br>
