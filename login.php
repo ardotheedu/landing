@@ -30,7 +30,6 @@
               <label for="senha">Senha:</label>
               <input class="input" type="password" id="senha" name="senha" placeholder="Senha" required><br><br>
             </div>
-            <p>Esqueceu a senha? <a href="#" >Recuperar</a></p>
             <p>Não tem conta? <a href="formulario.php"> Crie uma. </a> </p>
             <input class="submit" type="submit" value="Acessar">
           </form>

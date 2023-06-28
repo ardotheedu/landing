@@ -28,23 +28,7 @@ if (isset($_FILES["upload"])) {
                     <p class="logo-name">Ubiq</p>
                 </section>
                 <section class="nav-welcome">
-                <?php
-    include("conexao.php");
-    if (isset($_SESSION["profilePicPath"])) {
-        $name = $_SESSION["profilePicPath"];
-        $sql = "SELECT `file_mime`, `file_data` FROM `storage` WHERE `file_name`=('$name')";
-        $stmt = mysqli_query($conexao, $sql);
-        $file = $stmt->fetch_row();
-
-        if ($file) {
-            echo '<img src="data:image/jpeg;base64,'.base64_encode($file[1]) .'" />';
             
-        } else {
-            $error = "$name not found";
-        }
-    
-    }
-    ?>
         <p>Bem-vindo(a)  <a class="name"> <?php echo $_SESSION['nome']; ?></a>  ao painel do usuário.</p>
                 </section>
             </nav>
