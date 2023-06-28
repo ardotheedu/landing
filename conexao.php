@@ -2,7 +2,7 @@
     $servidor = "localhost";
     $usuario = "root";
     $senha = "";
-    $dbname = "cadastroubiq";
+    $dbname = "cadastro";
 
     $conexao = mysqli_connect($servidor, $usuario, $senha, $dbname);
     if(!$conexao){
