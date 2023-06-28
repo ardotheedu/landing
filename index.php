@@ -1,13 +1,38 @@
 <?php
 include("top.php");
+include("conexao.php");
+
+// Verificar se a sessão de visitante já foi iniciada
+session_start();
+
+// Verificar se o cookie de visitante já foi definido
+if (!isset($_COOKIE['visitante'])) {
+    // Verificar se há algum registro de visitantes no banco de dados
+    $resultado = $conexao->query("SELECT * FROM visitantes WHERE tipo = 'index'");
+    $registros = $resultado->num_rows;
+
+    if ($registros == 0) {
+        // Não há registros de visitantes, criar um novo registro
+        $conexao->query("INSERT INTO visitantes (quantidade, tipo) VALUES (1, 'index')");
+    } else {
+        // Já existem registros de visitantes, atualizar o número de visitantes
+        $conexao->query("UPDATE visitantes SET quantidade = quantidade + 1 WHERE tipo = 'index'");
+    }
+
+    // Definir um cookie para marcar o visitante
+    setcookie('visitante', 'true', time() + (86400 * 30), '/'); // Cookie válido por 30 dias
+    $conexao->close();
+}
+
 ?>
+
         <main class="container main">
-            <section class="container-section">
+            <section class="container-section" id="inicio">
                 <article class="content-main">
                     <h1 class="tour">Faça um tour pelo o nosso <span class="atention-color">Bot</span> de proteção</h1>
                     <p class="legend">Nós somos altamente focados em proteção para comunidade no Discord.</p>
                     <section class="flex">
-                        <a class="button-start" href="login.php" target="_blank">Começar ></a>
+                        <a class="button-start" href="formulario.php" target="_blank">Começar ></a>
                         <a class="button-more" href="saibamais.html" target="_blank">Saiba Mais</a>
                     </section>
                 </article>
@@ -18,7 +43,7 @@ include("top.php");
             <section class="clients">
                 <img src="./images/Clients.svg" alt="Nosso clientes: Slack, Woocommerce, Amazon e Microsoft"/>
             </section>
-            <section  class="container-section gap about-us">
+            <section  class="container-section gap about-us" id="sobre">
                 <article>
                     <img src="./images/robot-cleaning-mirror.svg" alt="Robo fazendo limpeza em um vidro" />
                 </article>
@@ -41,7 +66,7 @@ include("top.php");
                     </section>
                 </article>
             </section>
-            <section class="features">
+            <section class="features" id="funcionalidades">
                 <article>
                     <section class="center">
                         <h1 class="title">Funcionalidades</h1>
@@ -75,7 +100,7 @@ include("top.php");
                     </section>
                 </article>
             </section>
-            <section class="container-section gap values">
+            <section class="container-section gap values" id="valores">
                 <article>
                     <img src="./images/robots-doing-business-discussion.svg" alt="Robos armados preparados para eliminar ameaças">
                 </article>

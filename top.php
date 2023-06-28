@@ -19,12 +19,12 @@
                 </section>
                 <section class="nav-links">
                     <ul class="links">
-                        <li><a class="link atention-color" href="index.php">Inicio</a></li>
-                        <li><a class="link" href="sobre.php">Sobre</a></li>
-                        <li><a class="link" href="funcionalidades.php">Funcionalidades</a></li>
-                        <li><a class="link" href="valores.php">Valores</a></li>
+                        <li><a class="link atention-color" href="#inicio">Inicio</a></li>
+                        <li><a class="link" href="#sobre">Sobre</a></li>
+                        <li><a class="link" href="#funcionalidades">Funcionalidades</a></li>
+                        <li><a class="link" href="#valores">Valores</a></li>
                     </ul>
-                    <a class="signup" href="login.php" target="_blank">Iniciar</a>
+                    <a class="signup" href="formulario.php" target="_blank">Iniciar</a>
                 </section>
             </nav>
         </header>

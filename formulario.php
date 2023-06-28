@@ -1,5 +1,30 @@
+
 <?php
-  include("verificarlogin.php");
+include("verificarlogin.php");
+include("conexao.php");
+
+// Verificar se a sessão de visitante já foi iniciada
+session_start();
+
+// Verificar se o cookie de visitante já foi definido
+if (!isset($_COOKIE['visitante_criar_conta'])) {
+    // Verificar se há algum registro de visitantes no banco de dados
+    $resultado = $conexao->query("SELECT * FROM visitantes WHERE tipo = 'conta'");
+    $registros = $resultado->num_rows;
+
+    if ($registros == 0) {
+        // Não há registros de visitantes, criar um novo registro
+        $conexao->query("INSERT INTO visitantes (quantidade, tipo) VALUES (1, 'conta')");
+    } else {
+        // Já existem registros de visitantes, atualizar o número de visitantes
+        $conexao->query("UPDATE visitantes SET quantidade = quantidade + 1 WHERE tipo = 'conta'");
+    }
+
+    // Definir um cookie para marcar o visitante
+    setcookie('visitante_criar_conta', 'true', time() + (86400 * 30), '/'); // Cookie válido por 30 dias
+    $conexao->close();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
