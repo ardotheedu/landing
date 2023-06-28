@@ -10,7 +10,7 @@
                 </article>
                 <nav>
                     <ul class="links">
-                        <li><a class="link-footer" href="index.html">Home</a></li>
+                        <li><a class="link-footer" href="index.php">Home</a></li>
                         <li><a class="link-footer" href="sobre.html">Sobre nós</a></li>
                         <li><a class="link-footer" href="funcionalidades.html">Funcionalidades</a></li>
                         <li><a class="link-footer" href="valores.html">Valores</a></li>
