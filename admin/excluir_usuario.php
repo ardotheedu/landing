@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+include("../conexao.php");
 
 // Verifica se o ID do usuário foi passado como parâmetro na URL
 if (isset($_GET['id'])) {

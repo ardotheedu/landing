@@ -4,7 +4,7 @@
     <a class="title-container"><h1>PAINEL</h1></a>
     <br>
         <?php
-                include("conexao.php");
+                include("../conexao.php");
                 $countQuery = "SELECT * FROM cadastroubiq";
                 $resultado = $conexao->query($countQuery);
 

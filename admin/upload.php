@@ -1,6 +1,6 @@
 <?php
 // Connect to the database (Assuming you have a valid database connection)
-include("conexao.php");
+include("../conexao.php");
 
 // Validate and handle the file upload
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["profilePic"])) {

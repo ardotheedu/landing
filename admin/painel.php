@@ -4,7 +4,7 @@
     <a class="title-container"><h1>PAINEL</h1></a>
     <br>
         <?php
-                include("conexao.php");
+                include("../conexao.php");
                 $countQuery = "SELECT COUNT(*) as total FROM cadastroubiq";
                 $resultado = $conexao->query($countQuery);
                 $totalRegistros = $resultado->fetch_assoc()['total'];
@@ -55,5 +55,5 @@
     <br>
 </secton>
 <?php
-include("bottom.php");
+include("../bottom.php");
 ?>

@@ -1,14 +1,15 @@
 <?php include("top-profile2.php")?>  
 <?php
 include("protect.php");
-include("conexao.php");
+include("../conexao.php");
 
-include("protect.php");
+$sql = "SELECT `filepath` FROM images ORDER BY Id DESC LIMIT 1";
+$resultado = $conexao->query($sql);
+$path = $resultado->fetch_assoc()['filepath'];
 
-if (isset($_SESSION["profilePicPath"])) {
-  $profilePicPath = $_SESSION["profilePicPath"];
+if ($resultado) {
+  $profilePicPath = $path;
 } else {
-  // Set a default profile picture path if no picture has been uploaded yet
   $profilePicPath = "profile_pics/default.png";
 }
 

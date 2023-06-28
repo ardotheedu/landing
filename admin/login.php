@@ -13,7 +13,7 @@
 <body>
   <div class="container">
     <div class="hero">
-        <img src="./images/robot-finding-data.svg" />
+        <img src="../images/robot-finding-data.svg" />
     </div>
     <div>
       <a href="./">
