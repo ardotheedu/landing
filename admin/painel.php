@@ -5,7 +5,7 @@
     <br>
         <?php
                 include("../conexao.php");
-                $countQuery = "SELECT COUNT(*) as total FROM cadastroubiq";
+                $countQuery = "SELECT COUNT(*) as total FROM leads";
                 $resultado = $conexao->query($countQuery);
                 $totalRegistros = $resultado->fetch_assoc()['total'];
 
@@ -17,7 +17,7 @@
 
                     $taxaConversao = ($totalRegistros / $numeroVisitas) * 100;
 
-                    echo "<p>Taxa de conversão visitante em leads  -  $taxaConversao  </p>";
+                    echo "<p>" . "Taxa de conversão visitante em leads  - " . $taxaConversao . "%" . "</p>";
                 } else {
                     echo "<p> Não ha dados sobre numero de visita";
                 }
@@ -31,7 +31,7 @@
                     $taxa_finalizaram_cadastro =  ($totalRegistros / $numeroVisitasCadastro) * 100;
 
 
-                    echo "<p>Taxa de conversão quem finalizou cadastro  -  $taxa_finalizaram_cadastro  </p>";
+                    echo "<p>" . "Taxa de conversão que finalizaram o cadastro  - " . $taxa_finalizaram_cadastro . "%" . "</p>";
                 } else {
                     echo "<p>Não dados sobre visita na pagina de cadastro  </p>";
                 }
@@ -55,5 +55,5 @@
     <br>
 </secton>
 <?php
-include("../bottom.php");
+include("bottom.php");
 ?>

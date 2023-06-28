@@ -5,23 +5,27 @@
     <br>
         <?php
                 include("../conexao.php");
-                $countQuery = "SELECT * FROM cadastroubiq";
+                $countQuery = "SELECT * FROM leads";
                 $resultado = $conexao->query($countQuery);
 
                 // Verificar se há resultados
                 if ($resultado->num_rows > 0) {
                     // Loop através dos resultados e exibir os usuários
                     echo "<table>";
-                    echo "<tr><th>Nome</th><th>E-mail</th><th>Ação</th></tr>";
+                    echo "<tr><th>Nome</th><th>E-mail</th><th>Telefone</th><th>Link do Server</th><th>Ação</th></tr>";
                 
                     while ($row = $resultado->fetch_assoc()) {
-                        $nome = $row['nome'];
+                        $nome = $row['name'];
                         $email = $row['email'];
+                        $telefone = $row['phone'];
+                        $community_link = $row['community_link'];
                         $id = $row['id'];
                 
                         echo "<tr>";
                         echo "<td>" . $nome . "</td>";
                         echo "<td>" . $email . "</td>";
+                        echo "<td>" . $telefone . "</td>";
+                        echo "<td>" . $community_link . "</td>";
                         echo "<td><a href='excluir_usuario.php?id=" . $id . "'>Excluir</a></td>";
                         echo "</tr>";
                     }
