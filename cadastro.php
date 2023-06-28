@@ -24,7 +24,7 @@ if (isset($_POST['senha'])) {
 $sql = "INSERT INTO cadastroubiq(nome, email, senha) VALUES ('$nome', '$email', '$senhaCriptografada')";
 
 if (mysqli_query($conexao, $sql)) {
-    echo "<p>Usuário cadastrado<p>";
+    header('Location: login.php');
 } else {
     echo "<p>Erro: <p>" . mysqli_error($conexao);
 }

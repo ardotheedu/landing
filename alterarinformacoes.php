@@ -4,14 +4,13 @@ include("protect.php");
 include("conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
   $nome = $_POST['nome'];
   $email = $_POST['email'];
   $senha = $_POST['senha'];
-
+  $senhaCriptografada = md5($senha); // Criptografa a senha usando o MD5
 
   $id = $_SESSION['id'];
-  $sql = "UPDATE cadastroubiq SET nome='$nome', email='$email', senha='$senha' WHERE id='$id'";
+  $sql = "UPDATE cadastroubiq SET nome='$nome', email='$email', senha='$senhaCriptografada' WHERE id='$id'";
   if (mysqli_query($conexao, $sql)) {
     echo "<p>Informações atualizadas com sucesso</p>";
     $_SESSION['nome'] = $nome;
@@ -28,24 +27,26 @@ $usuario = mysqli_fetch_assoc($resultado);
 mysqli_close($conexao);
 ?>
 
-  <section class="container-main">
-    <h1>Alterar informações</h1>
-    <form action="" method="POST">
-      <div>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" value="<?php echo $usuario['nome']; ?>" required>
-      </div>
-      <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="<?php echo $usuario['email']; ?>" required>
-      </div>
-      <div>
-        <label for="senha">Nova senha:</label>
-        <input type="password" id="senha" name="senha" required>
-      </div>
+<section class="container-main">
+  <h1>Alterar informações</h1>
+  <form action="" method="POST">
+    <div class="form-row">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" value="<?php echo $usuario['nome']; ?>" required>
+    </div>
+    <div class="form-row">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" value="<?php echo $usuario['email']; ?>" required>
+    </div>
+    <div class="form-row">
+      <label for="senha">Nova senha:</label>
+      <input type="password" id="senha" name="senha" required>
+    </div>
+    <div class="button-group">
       <input type="submit" value="Salvar">
-    </form>
-    <br>
-    <a class="back-button" href="painel.php">Voltar ao painel</a>
+      <a class="back-button" href="painel.php">Voltar ao painel</a>
+    </div>
+  </form>
+  <br>
 </section>
-    <?php include("bottom.php")?> 
+<?php include("bottom.php")?>
