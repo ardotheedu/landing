@@ -114,7 +114,6 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
 }
 form {
     flex-direction: column;
@@ -139,9 +138,6 @@ input[type="submit"]{
     align-items: center;
     margin-top: 40px;
   }  
-input[type="file"]{
-    display: none;
-}
 label{
     background: #0057FF;
     border-radius: 10px;

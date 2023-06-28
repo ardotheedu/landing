@@ -132,9 +132,6 @@ input[type="submit"]{
     margin-right: 10px;
 }
 
-input[type="file"]{
-    display: none;
-}
 label{
     background: #0057FF;
     border-radius: 10px;

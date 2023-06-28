@@ -5,14 +5,11 @@ include("conexao.php");
 
 include("protect.php");
 
-// (A) SAVE IMAGE INTO DATABASE
-if (isset($_FILES["upload"])) {
-    require "2-lib-store.php";
-    $result = $_STORE->save(); // Save the uploaded image to the database
-    if ($result === true) {
-        $_SESSION["profilePicPath"] = $_FILES["upload"]["name"];
-    }
-    echo "<div class='note'>" . ($result ? "OK" : $_STORE->error) . "</div>";
+if (isset($_SESSION["profilePicPath"])) {
+  $profilePicPath = $_SESSION["profilePicPath"];
+} else {
+  // Set a default profile picture path if no picture has been uploaded yet
+  $profilePicPath = "profile_pics/default.png";
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -41,6 +38,12 @@ mysqli_close($conexao);
 
 <section class="container-main">
   <h1>Alterar informações</h1>
+  <img class="rounded-image" src="<?php echo $profilePicPath; ?>" alt="Profile Picture">
+    
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="profilePic" id="profilePic">
+        <input type="submit" value="Upload">
+    </form>
   <form action="" method="POST">
        
     <div class="form-row">
@@ -55,24 +58,8 @@ mysqli_close($conexao);
       <label for="senha">Nova senha:</label>
       <input type="password" id="senha" name="senha" required>
     </div>
-    <?php
-            include("conexao.php");
-            
-                $sql = "SELECT `file_mime`, `file_data` FROM `storage`LIMIT 1";
-                $stmt = mysqli_query($conexao, $sql);
-                $file = $stmt->fetch_row();
-
-                if ($file) {
-                    echo '<img alt="Imagem" class="rounded-image"  src="data:image/jpeg;base64,'.base64_encode($file[1]) .'" />';
-                    
-                } else {
-                    $error = "$name not found";
-                }
-            
-                mysqli_close($conexao);
-        ?>
-    <input type="file" name="upload" required>
-
+   
+    
     <div class="button-group">
       <input type="submit" value="Salvar">
       <a class="back-button" href="painel.php">Voltar ao painel</a>
