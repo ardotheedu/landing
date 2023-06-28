@@ -1,3 +1,4 @@
+<?php include("top-profile2.php")?>  
 <?php
 include("protect.php");
 include("conexao.php");
@@ -27,15 +28,7 @@ $usuario = mysqli_fetch_assoc($resultado);
 mysqli_close($conexao);
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alterar informações do usuário</title>
-</head>
-<body>
+  <section class="container-main">
     <h1>Alterar informações</h1>
     <form action="" method="POST">
       <div>
@@ -53,6 +46,6 @@ mysqli_close($conexao);
       <input type="submit" value="Salvar">
     </form>
     <br>
-    <a href="painel.php">Voltar ao painel</a>
-</body>
-</html>
+    <a class="back-button" href="painel.php">Voltar ao painel</a>
+</section>
+    <?php include("bottom.php")?> 

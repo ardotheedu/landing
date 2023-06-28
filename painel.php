@@ -1,56 +1,30 @@
-<?php
-include("protect.php");
-
-if (isset($_FILES["upload"])) {
-    require "2-lib-store.php";
-    $result = $_STORE->save();
-    if ($result === true) {
-        $_SESSION["profilePicPath"] = $_FILES["upload"]["name"];
-    }
-    echo "<div class='note'>" . ($result ? "OK" : $_STORE->error) . "</div>";
-}
-?>
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel do usuário</title>
-</head>
-<body>
-    <p>Bem-vindo ao painel do usuário.</p>
+<?php include("top-profile.php")?>
     <br><br>
-
-    <h1>PAINEL</h1>
+    <section class="container-main">
+    <a class="title-container"><h1>PAINEL</h1></a>
     <br>
-    <p>Imagem do usuário:</p>
-    <?php
-    include("conexao.php");
-    if (isset($_SESSION["profilePicPath"])) {
-        $name = $_SESSION["profilePicPath"];
-        $sql = "SELECT `file_mime`, `file_data` FROM `storage` WHERE `file_name`=('$name')";
-        $stmt = mysqli_query($conexao, $sql);
-        $file = $stmt->fetch_row();
-
-        if ($file) {
-            echo '<img src="data:image/jpeg;base64,'.base64_encode($file[1]) .'" />';
-            
-        } else {
-            $error = "$name not found";
-        }
-    
-    }
-    ?>
-    <br><br>
+    <a class="title-photo"><p>Imagem de perfil</p></a>
+    <br>
+    <div class="image-container">
+        <?php
+        // Caminho da imagem vindo do banco de dados ou alguma lógica PHP
+        ?>
+        <img src="<?php echo $caminhoImagem; ?>" alt="Imagem" class="rounded-image">
+    </div>
+    <br>
     <form method="post" enctype="multipart/form-data">
-        <input type="file" name="upload" required>
-        <input type="submit" name="submit" value="Upload File">
+        <label for="up">Escolher Arquivo</label>
+        <input type="file" accept="image" name="upload" required id="up">
+        <input type="submit"  name="submit" value="Enviar Arquivo">
     </form>
-    <p>Nome: <?php echo $_SESSION['nome']; ?></p>
-    <a href="alterarinformacoes.php">Alterar informações do usuário</a>
+</section>
+    <secton class="section-button">
+        <div class="container">
+        <a class="button" href="alterarinformacoes.php">Alterar informações do usuário</a>
+        <a class="button" href="logout.php">Encerrar a sessão</a>
+        </div>
     <br>
-    <p><a href="logout.php">Encerrar a sessão</a></p>
-</body>
-</html>
+</secton>
+<?php
+include("bottom.php");
+?>

@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    background-color: #FAFAF8;
+}
+h1 {
+    margin: 0;
+}
+.button {
+    background: #0057FF;
+    border-radius: 10px;
+    padding: 21px 53px;
+    border: none;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer {
+    background-color: #2B2B2B;
+    width: 100%;
+    padding-bottom: 40px;
+
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+.footer-logo-name {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    color: #FFF;
+    margin-left: 8px;
+}
+.link-footer {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    margin-right: 40px;
+    color: #FFFFFF;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+.links {
+    margin: 0;
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.section-button {
+    display: inline;
+    grid-template-columns: 1fr 1.5fr;
+}
+.container {
+    text-align: center;
+}
+.container-head {
+    width: 1180px;
+    margin: 0 auto;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo-name {
+    font-size: 30px;
+    color: #2B2B2B;
+    margin-left: 8px;
+    font-weight: 700;
+    line-height: 41px;
+}
+.nav-welcome {
+    display: flex;
+    align-items: center;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.name{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+.rounded-image {
+    border-radius: 50%;
+    border: 2px solid #E0E0E0;
+    width: 300px;
+    height: 300px;
+}
+.container-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+form {
+    flex-direction: column;
+    align-items: center;
+}
+input[type="submit"]{
+    background: #0057FF;
+    border-radius: 10px;
+    padding: 21px 53px;
+    border: none;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+input[type="file"]{
+    display: none;
+}
+label{
+    background: #0057FF;
+    border-radius: 10px;
+    padding: 21px 53px;
+    border: none;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}

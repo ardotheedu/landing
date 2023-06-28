@@ -7,7 +7,7 @@ include("top.php");
                     <h1 class="tour">Faça um tour pelo o nosso <span class="atention-color">Bot</span> de proteção</h1>
                     <p class="legend">Nós somos altamente focados em proteção para comunidade no Discord.</p>
                     <section class="flex">
-                        <a class="button-start" href="comecar.html" target="_blank">Começar ></a>
+                        <a class="button-start" href="login.php" target="_blank">Começar ></a>
                         <a class="button-more" href="saibamais.html" target="_blank">Saiba Mais</a>
                     </section>
                 </article>
