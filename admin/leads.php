@@ -45,6 +45,7 @@
         <div class="container">
            
         <a class="button" href="alterarinformacoes.php">Alterar informações do usuário</a>
+        <a class="back-button" href="painel.php">Voltar ao painel</a>
         <a class="button" href="logout.php">Encerrar a sessão</a>
         </div>
     <br>
