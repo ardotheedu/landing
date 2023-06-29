@@ -40,7 +40,7 @@
 
                 
                 // Exibir o total de registros na página
-                echo "<a href='leads.php'>$totalRegistros registros</a>";
+                echo "<a class='button' href='leads.php'>$totalRegistros registros</a>";
                 $conexao->close();
             ?>                
         </div>
