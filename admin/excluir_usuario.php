@@ -6,7 +6,7 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
     // Realiza a exclusão do usuário com base no ID
-    $sql = "DELETE FROM cadastroubiq WHERE id = $id";
+    $sql = "DELETE FROM leads WHERE id = $id";
     if ($conexao->query($sql) === TRUE) {
         echo "Usuário excluído com sucesso.";
     } else {
