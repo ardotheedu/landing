@@ -32,8 +32,8 @@ if (!isset($_COOKIE['visitante'])) {
                     <h1 class="tour">Faça um tour pelo o nosso <span class="atention-color">Bot</span> de proteção</h1>
                     <p class="legend">Nós somos altamente focados em proteção para comunidade no Discord.</p>
                     <section class="flex">
-                        <a class="button-start" href="formulario.php" target="_blank">Começar ></a>
-                        <a class="button-more" href="saibamais.html" target="_blank">Saiba Mais</a>
+                        <a class="button-start" href="formulario.php">Começar ></a>
+                        <a class="button-more" href="saibamais.html">Saiba Mais</a>
                     </section>
                 </article>
                 <article class="hero">
