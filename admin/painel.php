@@ -7,7 +7,8 @@
                 include("../conexao.php");
                 $countQuery = "SELECT COUNT(*) as total FROM leads";
                 $resultado = $conexao->query($countQuery);
-                $totalRegistros = ($resultado->fetch_assoc()['total']) ? $resultado->fetch_assoc()['total'] : 0;
+                $totalRegistros = $resultado->fetch_assoc()['total'];
+                $totalRegistros = $totalRegistros ? $totalRegistros : 0;
 
                 echo "<p>" . "total de leads  - " . $totalRegistros . "</p>";
 
