@@ -1,6 +1,4 @@
-
 <?php
-include("verificarlogin.php");
 include("conexao.php");
 
 // Verificar se a sessão de visitante já foi iniciada
