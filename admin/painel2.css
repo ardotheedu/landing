@@ -131,6 +131,7 @@ input[type="submit"]{
     text-decoration: none;
     display: inline-block;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 .button-group {
     display: flex;
@@ -159,3 +160,19 @@ label{
     text-align: center;
     margin-right: 20px;
   }
+  input[type="file"] {
+   display: none;
+  }
+   .filex {
+    background: #0057FF;
+    border-radius: 10px;
+    padding: 15px 53px;
+    border: none;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom:10px;
+    cursor: pointer;
+   }

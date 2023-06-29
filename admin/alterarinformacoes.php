@@ -42,6 +42,7 @@ mysqli_close($conexao);
   <img class="rounded-image" src="<?php echo $profilePicPath; ?>" alt="Profile Picture">
     
     <form action="upload.php" method="POST" enctype="multipart/form-data">
+      <label class="filex" for="profilePic">Selecionar Arquivo</label>
         <input type="file" name="profilePic" id="profilePic">
         <input type="submit" value="Upload">
     </form>
