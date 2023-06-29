@@ -13,18 +13,23 @@ if (isset($_POST['email'])) {
     $email = '';
 }
 
-if (isset($_POST['senha'])) {
-    $senha = $_POST['senha'];
-    $senhaCriptografada = md5($senha); // Criptografa a senha usando MD5
+if (isset($_POST['phone'])) {
+    $phone = $_POST['phone'];
 } else {
-    $senha = '';
-    $senhaCriptografada = '';
+    $phone = '';
 }
 
-$sql = "INSERT INTO cadastroubiq(nome, email, senha) VALUES ('$nome', '$email', '$senhaCriptografada')";
+if (isset($_POST['community_link'])) {
+    $community_link = $_POST['community_link'];
+} else {
+    $community_link = '';
+}
+
+
+$sql = "INSERT INTO leads(`name`, email, phone, community_link) VALUES ('$nome', '$email', '$phone', '$community_link')";
 
 if (mysqli_query($conexao, $sql)) {
-    header('Location: login.php');
+    header('Location: obrigado.php');
 } else {
     echo "<p>Erro: <p>" . mysqli_error($conexao);
 }

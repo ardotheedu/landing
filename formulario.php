@@ -47,15 +47,19 @@ if (!isset($_COOKIE['visitante_criar_conta'])) {
           <form action="cadastro.php" method="POST">
             <div class="field">
               <label for="email">Nome:</label>
-              <input class="input" type="text" id="nome" name="nome" placeholder="Email" required><br><br>
+              <input class="input" type="text" id="nome" name="nome" placeholder="Nome" required><br><br>
             </div>
             <div class="field">
               <label for="email">Email:</label>
               <input class="input" type="email" id="email" name="email" placeholder="Email" required><br><br>
             </div>
             <div class="field">
-              <label for="senha">Senha:</label>
-              <input class="input" type="password" id="senha" name="senha" placeholder="Senha" required><br><br>
+              <label for="telefone">Telefone:</label>
+              <input class="input" type="phone" id="phone" name="phone" placeholder="Telefone" required><br><br>
+            </div>
+            <div class="field">
+              <label for="community_link">Link:</label>
+              <input class="input" type="text" id="community_link" name="community_link" placeholder="Link do servidor" required><br><br>
             </div>
             <input class="submit" type="submit" value="Criar conta">
           </form>
