@@ -260,3 +260,13 @@ h1 {
     color: #FFFFFF;
     border: none;
 }
+p.ty{
+    font-size: 50px;
+    text-align: center;
+
+}
+.div-ty{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
