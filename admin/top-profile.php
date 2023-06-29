@@ -20,7 +20,7 @@ include("protect.php");
                 </section>
                 <section class="nav-welcome">
             
-        <p>Bem-vindo(a)  <a class="name"> <?php echo $_SESSION['nome']; ?></a>  ao painel do usuário.</p>
+        <p>Bem-vindo(a)  <a class="name"> <?php echo $_SESSION['nome']; ?></a>  ao painel do administrador.</p>
                 </section>
             </nav>
         </header>
